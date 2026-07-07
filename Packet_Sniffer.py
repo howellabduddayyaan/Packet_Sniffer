@@ -23,3 +23,8 @@ def sniff_packet(packet):
         print(f"Destination IP  : {packet[IP].dst}")
         
 # _________________________________________________________________________________________________
+
+        if TCP in packet:
+            print("Protocol         : TCP")
+            print(f"Source Port     : {packet[TCP].sport}")
+            print(f"Destination Port: {packet[TCP].dport}")
