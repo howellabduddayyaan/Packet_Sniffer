@@ -15,5 +15,11 @@ def sniff_packet(packet):
     count += 1
 
     print(f"\nPacket {count}")
+    
 
-    # if IP in packet :
+    if IP in packet :
+        
+        print(f"Source IP       : {packet[IP].src}")
+        print(f"Destination IP  : {packet[IP].dst}")
+        
+# _________________________________________________________________________________________________
