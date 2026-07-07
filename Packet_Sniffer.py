@@ -28,3 +28,11 @@ def sniff_packet(packet):
             print("Protocol         : TCP")
             print(f"Source Port     : {packet[TCP].sport}")
             print(f"Destination Port: {packet[TCP].dport}")
+            
+# _________________________________________________________________________________________________
+
+print("\nListening for packets...\n")
+
+sniff(prn = sniff_packet, store = False)
+
+# _________________________________________________________________________________________________
